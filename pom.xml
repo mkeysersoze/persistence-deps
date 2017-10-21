@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.trends</groupId>
+	<artifactId>persistence-deps</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>A group of dependencies</description>
+
+	<properties>
+		<project.groupId>com.trends</project.groupId>
+		<java.compiler.version>1.8</java.compiler.version>
+		<maven.compiler.plugin.version>3.6.2</maven.compiler.plugin.version>
+		<hibernate.version>5.0.12.Final</hibernate.version>
+		<mysql.version>5.1.40</mysql.version>
+		<hikari.version>2.6.0</hikari.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- Persistence -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- Datasource -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>${hikari.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+	</dependencies>
+</project>
